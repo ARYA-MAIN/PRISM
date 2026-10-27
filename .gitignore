@@ -1,0 +1,50 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# PRISM backend
+**/.env
+**/.venv/
+**/venv/
+**/__pycache__/
+**/.pytest_cache/
+backend.zip
+
+# Duplicate frontend copies retained locally
+/prism/
+/src/
+/public/
+/node_modules/
+/dist/
+/index.html
+/package.json
+/package-lock.json
+/postcss.config.js
+/tailwind.config.js
+/tsconfig.app.json
+/tsconfig.json
+/tsconfig.node.json
+/vite.config.ts
+/.oxlintrc.json
+/README.txt
