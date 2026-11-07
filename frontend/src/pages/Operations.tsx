@@ -6,6 +6,7 @@ import { apiRequest, formatDate, formatNumber } from '../lib/api';
 import type { ApiPage } from '../lib/api';
 import { X } from 'lucide-react';
 import { OrderOutboundWorkflow } from '../components/OrderOutboundWorkflow';
+import { ReturnsDamageWorkflow } from '../components/ReturnsDamageWorkflow';
 
 type Summary = {
   inbound: { records: number; expected_units: number; received_units: number; damaged_units: number; inspection_review_count: number };
@@ -115,6 +116,14 @@ export const Operations: React.FC = () => {
       summary.reload();
     }}
     onReserved={() => setTab('outbound')}
+  />
+)}
+{tab === 'returns' && (
+  <ReturnsDamageWorkflow
+    onChanged={() => {
+      rows.reload();
+      summary.reload();
+    }}
   />
 )}
     {showReceipt && tab === 'inbound' && <form onSubmit={submitReceipt} className="space-y-4 rounded-xl border border-border bg-card p-5">
